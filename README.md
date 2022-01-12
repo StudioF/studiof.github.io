@@ -1,2 +1,2 @@
 # studiof.github.io
-Personal portfolio.
+Personal portfolio
