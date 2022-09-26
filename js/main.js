@@ -2,9 +2,48 @@
 (function () {
 	'use strict';
 
+	// var list = document.querySelector('.work'),
+	// i;
+	//
+	// for (i = list.children.length; i >= 0; i--) {
+	//   list.appendChild(list.children[Math.random() * i | 0]);
+	// }
+
+	//-----------------
+
+	// /**
+	//  * Randomly shuffle an array
+	//  * https://stackoverflow.com/a/2450976/1293256
+	//  * @param  {Array} array The array to shuffle
+	//  * @return {Array}       The shuffled array
+	//  */
+	function shuffle (array) {
+
+		let currentIndex = array.length;
+		let temporaryValue, randomIndex;
+
+		// While there remain elements to shuffle...
+		while (0 !== currentIndex) {
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+
+			// And swap it with the current element.
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+
+		return array;
+
+	}
+
 	let toggle = document.querySelector('.nav_mobile');
 	let menuMobile = document.querySelector('.menu_mobile');
 	let cards = document.querySelectorAll('.work li');
+	let cardsArr = Array.from(cards);
+
+	shuffle(cardsArr);
 
 	document.addEventListener('click', function (event) {
 		if (!event.target.closest('.nav_mobile')) return;
@@ -31,13 +70,6 @@
 	}
 
 	window.addEventListener('resize', toggle_off);
-
-	var list = document.querySelector('.work'),
-	  i;
-
-	for (i = list.children.length; i >= 0; i--) {
-	  list.appendChild(list.children[Math.random() * i | 0]);
-	}
 
 	/**
 	 * Store current instance
