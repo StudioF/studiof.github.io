@@ -4,6 +4,7 @@
 
 	let toggle = document.querySelector('.nav_mobile');
 	let menuMobile = document.querySelector('.menu_mobile');
+	let cards = document.querySelectorAll('.work li');
 
 	document.addEventListener('click', function (event) {
 		if (!event.target.closest('.nav_mobile')) return;
@@ -16,11 +17,27 @@
 		if (viewportW >= 900) {
 			toggle.classList.remove('active');
 			menuMobile.classList.remove('open');
-			console.log(viewportW);
 		}
 	}
 
+	for (var card of cards) {
+		let link = card.querySelector('a').getAttribute('href');
+		card.addEventListener('click', function(e){
+			e.preventDefault();
+			if (!e.target.closest('.info')) return;
+			window.location = link;
+			console.log(link);
+		});
+	}
+
 	window.addEventListener('resize', toggle_off);
+
+	var list = document.querySelector('.work'),
+	  i;
+
+	for (i = list.children.length; i >= 0; i--) {
+	  list.appendChild(list.children[Math.random() * i | 0]);
+	}
 
 	/**
 	 * Store current instance
