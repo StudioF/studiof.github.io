@@ -65,7 +65,6 @@
 			e.preventDefault();
 			if (!e.target.closest('.info')) return;
 			window.location = link;
-			console.log(link);
 		});
 	}
 
