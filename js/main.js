@@ -2,15 +2,6 @@
 (function () {
 	'use strict';
 
-	// var list = document.querySelector('.work'),
-	// i;
-	//
-	// for (i = list.children.length; i >= 0; i--) {
-	//   list.appendChild(list.children[Math.random() * i | 0]);
-	// }
-
-	//-----------------
-
 	// /**
 	//  * Randomly shuffle an array
 	//  * https://stackoverflow.com/a/2450976/1293256
@@ -41,9 +32,7 @@
 	let toggle = document.querySelector('.nav_mobile');
 	let menuMobile = document.querySelector('.menu_mobile');
 	let cards = document.querySelectorAll('.work li');
-	// let cardsArr = Array.from(cards);
-
-	shuffle(cards);
+	let cards_A = Array.from(cards);
 
 	document.addEventListener('click', function (event) {
 		if (!event.target.closest('.nav_mobile')) return;
@@ -69,6 +58,8 @@
 	}
 
 	window.addEventListener('resize', toggle_off);
+
+	shuffle(cards_A);
 
 	/**
 	 * Store current instance
