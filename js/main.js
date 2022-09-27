@@ -41,9 +41,9 @@
 	let toggle = document.querySelector('.nav_mobile');
 	let menuMobile = document.querySelector('.menu_mobile');
 	let cards = document.querySelectorAll('.work li');
-	let cardsArr = Array.from(cards);
+	// let cardsArr = Array.from(cards);
 
-	shuffle(cardsArr);
+	shuffle(cards);
 
 	document.addEventListener('click', function (event) {
 		if (!event.target.closest('.nav_mobile')) return;
