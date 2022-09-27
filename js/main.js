@@ -32,34 +32,39 @@
 	let toggle = document.querySelector('.nav_mobile');
 	let menuMobile = document.querySelector('.menu_mobile');
 	let cards = document.querySelectorAll('.work li');
-	let cards_A = Array.from(cards);
 
-	document.addEventListener('click', function (event) {
-		if (!event.target.closest('.nav_mobile')) return;
+
+
+	window.addEventListener('load', function() {
+		let cards_A = Array.from(cards);
+	  shuffle(cards_A);
+	});
+
+
+	document.addEventListener('click', function(event) {
+	  if (!event.target.closest('.nav_mobile')) return;
 	  toggle.classList.toggle('active');
-		menuMobile.classList.toggle('open');
+	  menuMobile.classList.toggle('open');
 	}, false);
 
-	function toggle_off () {
-		let viewportW = window.innerWidth;
-		if (viewportW >= 900) {
-			toggle.classList.remove('active');
-			menuMobile.classList.remove('open');
-		}
+	function toggle_off() {
+	  let viewportW = window.innerWidth;
+	  if (viewportW >= 900) {
+	    toggle.classList.remove('active');
+	    menuMobile.classList.remove('open');
+	  }
 	}
 
 	for (var card of cards) {
-		let link = card.querySelector('a').getAttribute('href');
-		card.addEventListener('click', function(e){
-			e.preventDefault();
-			if (!e.target.closest('.info')) return;
-			window.location = link;
-		});
+	  let link = card.querySelector('a').getAttribute('href');
+	  card.addEventListener('click', function(e) {
+	    e.preventDefault();
+	    if (!e.target.closest('.info')) return;
+	    window.location = link;
+	  });
 	}
 
 	window.addEventListener('resize', toggle_off);
-
-	shuffle(cards_A);
 
 	/**
 	 * Store current instance
