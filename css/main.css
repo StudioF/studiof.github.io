@@ -361,6 +361,7 @@ main.content article .description .title {
 	font-size: 1.2rem;
 	line-height: 13px;
 	line-height: 1.3rem;
+	max-width: 30vw;
 }
 main.content article .description .txt {
 	margin-bottom: 0.5em;
@@ -390,6 +391,7 @@ main.content article.about p a {
 	}
 	main.content article .description .title {
 		margin: 0 2em 0 0;
+		max-width: 15vw;
 	}
 	main.content article .description .txt {
 		font-size: 35.2px;
