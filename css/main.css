@@ -150,7 +150,8 @@ textarea {
 
 a {
 	color: inherit;
-	text-decoration: none;
+	text-decoration-thickness: 0.05rem;
+	text-underline-offset: 0.1em;
 }
 a:hover {
 	opacity: 0.6;
@@ -382,9 +383,6 @@ main.content article.about p {
 	line-height: 25px;
 	line-height: 2.5rem;
 }
-main.content article.about p a {
-	text-decoration: underline;
-}
 @media only screen and (min-width: 900px) {
 	main.content article .description {
 		flex-direction: row;
@@ -420,9 +418,6 @@ main.content article.about p a {
 		line-height: 34px;
 		line-height: 3.4rem;
 	}
-	main.content article.about p a {
-		text-decoration: underline;
-	}
 }
 
 footer {
@@ -442,6 +437,9 @@ footer {
 	display: grid;
 	column-gap: 0.3em;
 	row-gap: 2em;
+}
+.work a {
+	text-decoration: none;
 }
 .work li .no_thumb {
 	text-align: center;
@@ -497,6 +495,7 @@ footer {
 	bottom: 2em;
 	padding: 0.4em 0.7em 0.3em;
 	background: #f4f4f4;
+	text-decoration: none;
 }
 .back_btn svg {
 	position: relative;
@@ -508,4 +507,5 @@ footer {
 	border-radius: 9px;
 	padding: 0.55em 0.8em 0.45em;
 	background: #f4f4f4;
+	text-decoration: none;
 }
