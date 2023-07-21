@@ -1,4 +1,4 @@
-/*! StudioF v1.0.0 | (c) 2022 Studio F | All Rights Reserved. */
+/*! StudioF v1.0.0 | (c) 2023 Studio F | All Rights Reserved. */
 (function () {
   'use strict';
 

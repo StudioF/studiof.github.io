@@ -1,4 +1,4 @@
-/*! StudioF v1.0.0 | (c) 2022 Studio F | All Rights Reserved. */
+/*! StudioF v1.0.0 | (c) 2023 Studio F | All Rights Reserved. */
 @font-face {
 	font-family: "StudioF";
 	src: url("../fonts/STH-Bold.woff2") format("woff2");
@@ -475,18 +475,18 @@ footer {
 }
 @media only screen and (min-width: 700px) {
 	.work {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 @media only screen and (min-width: 900px) {
 	.work {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		row-gap: 1em;
 	}
 }
 @media only screen and (min-width: 1020px) {
 	.work {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
