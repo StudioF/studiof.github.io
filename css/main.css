@@ -1,7 +1,7 @@
 /*! StudioF v1.0.0 | (c) 2023 Studio F | All Rights Reserved. */
 @font-face {
 	font-family: "StudioF";
-	src: url("../fonts/STH-Bold.woff2") format("woff2");
+	src: url("../fonts/Rondoy-Bold.woff2") format("woff2");
 	font-weight: lighter;
 	font-style: normal;
 	letter-spacing: normal;
@@ -174,9 +174,7 @@ img {
 .logo {
 	position: fixed;
 	z-index: 2;
-	top: 1.4em;
-	width: 71px;
-	height: 71px;
+	top: calc(1.55em + 5px);
 }
 
 .nav_mobile {
@@ -302,7 +300,7 @@ header ._top {
 	justify-content: space-between;
 }
 header ._top .desc {
-	margin-left: 5.2em;
+	margin-left: calc(93px + 1em);
 }
 header ._top .desc ul {
 	display: flex;
@@ -420,6 +418,10 @@ main.content article.about p {
 	}
 }
 
+.type-work main article {
+	padding-bottom: 0;
+}
+
 footer {
 	text-align: center;
 	position: fixed;
@@ -491,10 +493,10 @@ footer {
 .back_btn {
 	color: black;
 	position: fixed;
-	border-radius: 11px;
+	border-radius: 7px;
 	bottom: 2em;
 	padding: 0.4em 0.7em 0.3em;
-	background: #f4f4f4;
+	background-color: #f4f4f4;
 	text-decoration: none;
 }
 .back_btn svg {
@@ -504,8 +506,8 @@ footer {
 
 .btn {
 	color: black;
-	border-radius: 9px;
-	padding: 0.55em 0.8em 0.45em;
+	border-radius: 7px;
+	padding: 0.45em 0.8em 0.45em;
 	background: #f4f4f4;
 	text-decoration: none;
 }

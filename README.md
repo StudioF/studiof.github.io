@@ -1,2 +1,2 @@
 # studiof.github.io
-Personal portfolio of Studio FF
+Studio F by Francesco Franciosi
