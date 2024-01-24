@@ -1,4 +1,4 @@
-/*! StudioF v1.0.0 | (c) 2023 Studio F | All Rights Reserved. */
+/*! StudioF v1.0.0 | (c) 2024 Studio F | All Rights Reserved. */
 @font-face {
 	font-family: "StudioF";
 	src: url("../fonts/Rondoy-Bold.woff2") format("woff2");
@@ -253,6 +253,7 @@ img {
 	font-size: clamp(2.3rem, -0.4rem + 9.6vw, 5rem);
 }
 .menu_mobile .menu_wrap .desc li:nth-child(n+2) {
+	margin-top: 0.5em;
 	font-size: clamp(1.7rem, -0.1rem + 6.4vw, 3.5rem);
 }
 .menu_mobile .menu_wrap .desc li:nth-child(3) {
