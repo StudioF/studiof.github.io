@@ -2,12 +2,6 @@
 (function () {
   'use strict';
 
-  // import {
-  //   shuffle
-  // } from './shuffle.js';
-  //
-
-
   let toggle = document.querySelector('.nav_mobile');
   let menuMobile = document.querySelector('.menu_mobile');
   let cards = document.querySelectorAll('.work li');
@@ -16,20 +10,20 @@
   var list = document.querySelector('.work'), i;
   if (list) {
     for (i = list.children.length; i >= 0; i--) {
-        list.appendChild(list.children[Math.random() * i | 0]);
+      list.appendChild(list.children[Math.random() * i | 0]);
     }
   }
 
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
     if (!event.target.closest('.nav_mobile')) return;
     toggle.classList.toggle('active');
     menuMobile.classList.toggle('open');
-    if(menuMobile.classList.contains('open')) {
+    if (menuMobile.classList.contains('open')) {
       mainbody.style.overflow = "hidden";
     } else {
       mainbody.removeAttribute('style');
     }
-    
+
   }, false);
 
   function toggle_off() {
@@ -43,10 +37,10 @@
 
   for (let card of cards) {
     let link = card.querySelector('a').getAttribute('href');
-    card.querySelector('.info').style.cursor = 'pointer';
-    card.addEventListener('click', function(e) {
+    card.querySelector('article').style.cursor = 'pointer';
+    card.addEventListener('click', function (e) {
       e.preventDefault();
-      if (!e.target.closest('.info')) return;
+      if (!e.target.closest('article')) return;
       window.location = link;
     });
   }
@@ -91,7 +85,7 @@
     'buttonBgColor': '',
     'buttonTextColor': 'black',
     'noticeBgColor': 'transparent',
-    'noticeTextColor': 'black',
+    'noticeTextColor': 'currentColor',
     'linkColor': ''
   };
 
@@ -371,6 +365,31 @@
       }
     }
     return source;
+  }
+
+  const hero = document.querySelector('.welcome');
+  if (hero) {
+    const heroH = Math.round(hero.offsetHeight * (1 - 0.20));
+    const toRGBArray = (rgbStr) => rgbStr.match(/\d+/g).map(Number);
+    let compStyles = window.getComputedStyle(hero);
+
+    let heroBgCol = compStyles.getPropertyValue('color');
+    heroBgCol = toRGBArray(heroBgCol);
+    const [red, green, blue] = heroBgCol ? heroBgCol : [0, 0, 0];
+
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY >= heroH) {
+        const y = 1 + (window.scrollY - heroH) / 15;
+        const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+        hero.style.color = `rgb(${r}, ${g}, ${b})`;
+      } else {
+        const [r, g, b] = [red, green, blue].map(Math.round);
+        hero.style.color = `rgb(${r}, ${g}, ${b})`;
+      }
+
+    });
   }
 
 }());
