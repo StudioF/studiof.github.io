@@ -4081,6 +4081,7 @@
 	--black: rgb(0, 0, 0);
 	--white: rgb(255, 255, 255);
 	--ease: all 0.4s ease;
+	--silver: #c7c7c7;
 }
 
 @media (prefers-color-scheme: light) {
@@ -4090,6 +4091,9 @@
 	}
 	body .welcome {
 		background-color: var(--white);
+	}
+	body .logo a svg {
+		fill: var(--black);
 	}
 	body .nav_toggle span, body .nav_toggle span:before, body .nav_toggle span:after {
 		background: var(--black);
@@ -4129,10 +4133,13 @@ body main .work li .info h4, body main .work li .info h5, body main .work li .in
 @media (prefers-color-scheme: dark) {
 	body {
 		background: var(--black);
-		color: #f4f4f4;
+		color: var(--silver);
 	}
 	body .welcome {
 		background-color: var(--black);
+	}
+	body .logo a svg {
+		fill: #c7c7c7;
 	}
 	body .nav_toggle span, body .nav_toggle span:before, body .nav_toggle span:after {
 		background: var(--white);
@@ -4234,6 +4241,18 @@ img {
 	position: fixed;
 	z-index: 2;
 	top: calc(1.55em + 5px);
+}
+.logo a {
+	padding: 1.2em 0.8em;
+	display: inline-block;
+	background-color: rgba(47, 47, 47, 0.123);
+	backdrop-filter: blur(5px) contrast(0.9) brightness(1);
+	-webkit-backdrop-filter: blur(5px) contrast(0.9) brightness(1);
+}
+.logo a svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 113px;
 }
 
 .nav_mobile {
@@ -4368,7 +4387,7 @@ header ._top {
 	justify-content: space-between;
 }
 header ._top .desc {
-	margin-left: calc(93px + 1em);
+	margin-left: calc(140px + 1em);
 }
 header ._top .desc ul {
 	display: flex;
