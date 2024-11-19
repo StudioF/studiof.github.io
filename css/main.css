@@ -4245,9 +4245,8 @@ img {
 .logo a {
 	padding: 1.2em 0.8em;
 	display: inline-block;
-	background-color: rgba(47, 47, 47, 0.123);
-	backdrop-filter: blur(5px) contrast(0.9) brightness(1);
-	-webkit-backdrop-filter: blur(5px) contrast(0.9) brightness(1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 }
 .logo a svg {
 	display: inline-block;
