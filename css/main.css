@@ -1,4 +1,4 @@
-/*! StudioF v1.0.0 | (c) 2024 Studio F | All Rights Reserved. */
+/*! StudioF v1.0.0 | (c) 2025 Studio F | All Rights Reserved. */
 @font-face {
 	font-family: "StudioF";
 	src: url("../fonts/Rondoy-Bold.woff2") format("woff2");
@@ -4117,7 +4117,7 @@
 		background: #efefef;
 	}
 	body main .work li .info h1, body main .work li .info h2, body main .work li .info h3,
-body main .work li .info h4, body main .work li .info h5, body main .work li .info h6 {
+	body main .work li .info h4, body main .work li .info h5, body main .work li .info h6 {
 		color: var(--black);
 	}
 	body footer {
@@ -4163,7 +4163,7 @@ body main .work li .info h4, body main .work li .info h5, body main .work li .in
 		background: #151515;
 	}
 	body main .work li .info h1, body main .work li .info h2, body main .work li .info h3,
-body main .work li .info h4, body main .work li .info h5, body main .work li .info h6 {
+	body main .work li .info h4, body main .work li .info h5, body main .work li .info h6 {
 		color: #a7a7a7;
 	}
 	body footer {
@@ -4644,7 +4644,7 @@ footer {
 .pricing:before {
 	content: "";
 	margin: 0 4px;
-	background-color: #6ff9ab;
+	background-color: rgb(111, 249, 171);
 	width: 7px;
 	height: 7px;
 	border-radius: 100px;

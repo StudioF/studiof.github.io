@@ -1,4 +1,4 @@
-/*! StudioF v1.0.0 | (c) 2024 Studio F | All Rights Reserved. */
+/*! StudioF v1.0.0 | (c) 2025 Studio F | All Rights Reserved. */
 (function () {
   'use strict';
 
@@ -392,4 +392,4 @@
     });
   }
 
-}());
+})();
